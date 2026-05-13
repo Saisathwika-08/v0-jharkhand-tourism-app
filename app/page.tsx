@@ -12,12 +12,18 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-emerald-50 to-orange-50">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="container mx-auto text-center">
+      {/* Hero Section with Background Image */}
+      <section 
+        className="relative py-32 px-4 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/hero-jharkhand.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl font-bold text-emerald-900 mb-6 text-balance">{t("home.title")}</h2>
-            <p className="text-xl text-emerald-700 mb-8 text-pretty leading-relaxed">{t("home.subtitle")}</p>
+            <h2 className="text-6xl font-bold text-white mb-6 text-balance drop-shadow-lg">{t("home.title")}</h2>
+            <p className="text-2xl text-white mb-8 text-pretty leading-relaxed drop-shadow-md">{t("home.subtitle")}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/trip-planner">
                 <Button
@@ -32,7 +38,7 @@ export default function HomePage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-orange-500 text-orange-600 hover:bg-orange-50 px-8 py-3 bg-transparent"
+                  className="border-white text-white hover:bg-white/10 px-8 py-3 bg-white/20 backdrop-blur-sm"
                 >
                   {t("common.bookNow")}
                 </Button>
@@ -54,56 +60,88 @@ export default function HomePage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link href="/destinations/pristine-waterfalls">
-              <Card className="border-emerald-100 hover:shadow-lg transition-shadow cursor-pointer">
+              <Card className="border-emerald-100 hover:shadow-lg transition-shadow cursor-pointer overflow-hidden h-full flex flex-col">
+                <div 
+                  className="h-40 bg-cover bg-center relative"
+                  style={{
+                    backgroundImage: "url('/waterfall-jh.jpg')",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
                 <CardHeader className="text-center">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Waves className="w-6 h-6 text-emerald-600" />
                   </div>
                   <CardTitle className="text-emerald-800">{t("destinations.waterfalls")}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-emerald-600 text-center">{t("destinations.waterfalls.desc")}</p>
                 </CardContent>
               </Card>
             </Link>
 
             <Link href="/destinations/tribal-heritage">
-              <Card className="border-orange-100 hover:shadow-lg transition-shadow cursor-pointer">
+              <Card className="border-orange-100 hover:shadow-lg transition-shadow cursor-pointer overflow-hidden h-full flex flex-col">
+                <div 
+                  className="h-40 bg-cover bg-center relative"
+                  style={{
+                    backgroundImage: "url('/tribal-jh.jpg')",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
                 <CardHeader className="text-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Users className="w-6 h-6 text-orange-600" />
                   </div>
                   <CardTitle className="text-orange-800">{t("destinations.heritage")}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-orange-600 text-center">{t("destinations.heritage.desc")}</p>
                 </CardContent>
               </Card>
             </Link>
 
             <Link href="/destinations/dense-forests">
-              <Card className="border-emerald-100 hover:shadow-lg transition-shadow cursor-pointer">
+              <Card className="border-emerald-100 hover:shadow-lg transition-shadow cursor-pointer overflow-hidden h-full flex flex-col">
+                <div 
+                  className="h-40 bg-cover bg-center relative"
+                  style={{
+                    backgroundImage: "url('/hero-jharkhand.jpg')",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
                 <CardHeader className="text-center">
                   <div className="w-12 h-12 bg-emerald-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <TreePine className="w-6 h-6 text-emerald-600" />
                   </div>
                   <CardTitle className="text-emerald-800">{t("destinations.forests")}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-emerald-600 text-center">{t("destinations.forests.desc")}</p>
                 </CardContent>
               </Card>
             </Link>
 
             <Link href="/destinations/authentic-homestays">
-              <Card className="border-orange-100 hover:shadow-lg transition-shadow cursor-pointer">
+              <Card className="border-orange-100 hover:shadow-lg transition-shadow cursor-pointer overflow-hidden h-full flex flex-col">
+                <div 
+                  className="h-40 bg-cover bg-center relative"
+                  style={{
+                    backgroundImage: "url('/tribal-jh.jpg')",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-black/20" />
+                </div>
                 <CardHeader className="text-center">
                   <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Building2 className="w-6 h-6 text-orange-600" />
                   </div>
                   <CardTitle className="text-orange-800">{t("destinations.homestays")}</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-orange-600 text-center">{t("destinations.homestays.desc")}</p>
                 </CardContent>
               </Card>
