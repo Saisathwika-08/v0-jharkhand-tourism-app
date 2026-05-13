@@ -29,7 +29,7 @@ export default function SignUpPage() {
     try {
       await signUp(email, password)
       // TODO: Store fullName and phone in MongoDB user profile
-      router.push("/dashboard")
+      router.push("/")
     } catch (error: unknown) {
       setError(error instanceof Error ? error.message : "An error occurred during sign up")
     } finally {
